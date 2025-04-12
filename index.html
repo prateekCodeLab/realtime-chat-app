@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Username Modal -->
+  <div class="username-modal" id="username-modal">
+    <div class="modal-content">
+      <h2>Choose a Username</h2>
+      <form id="username-form">
+        <input
+          type="text"
+          id="username-input"
+          placeholder="Enter your username..."
+          autocomplete="off"
+          aria-label="Username input"
+          required
+        />
+        <button type="submit" id="join-button">Join Chat</button>
+      </form>
+      <p id="username-error" class="error-message"></p>
+    </div>
+  </div>
+
+  <!-- Chat Interface (Hidden Initially) -->
+  <div class="chat-container" id="chat-container" style="display: none;">
+    <!-- Sidebar: Room List -->
+    <aside class="room-sidebar">
+      <button class="toggle-sidebar" aria-label="Toggle sidebar">☰</button>
+      <h2>Rooms</h2>
+      <ul class="room-list">
+        <!-- Dynamic rooms will be populated here -->
+      </ul>
+      <form id="create-room-form">
+        <input
+          type="text"
+          id="room-input"
+          placeholder="New room name..."
+          autocomplete="off"
+          aria-label="Room name input"
+        />
+        <button type="submit" id="create-room-button">Create Room</button>
+      </form>
+      <button class="theme-toggle" aria-label="Toggle light/dark theme">🌙</button>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+      <!-- Message Area -->
+      <section class="message-area"></section>
+
+      <!-- Input Area -->
+      <footer class="input-area">
+        <input
+          type="text"
+          class="message-input"
+          placeholder="Type your message..."
+          aria-label="Message input"
+        />
+        <button class="send-button" aria-label="Send message" disabled>Send</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
