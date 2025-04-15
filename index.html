@@ -15,6 +15,7 @@
         <input
           type="text"
           id="username-input"
+          name="username"
           placeholder="Enter your username..."
           autocomplete="off"
           aria-label="Username input"
@@ -28,9 +29,9 @@
 
   <!-- Chat Interface (Hidden Initially) -->
   <div class="chat-container" id="chat-container" style="display: none;">
+    <button class="toggle-sidebar" aria-label="Toggle sidebar">☰</button>
     <!-- Sidebar: Room List -->
     <aside class="room-sidebar">
-      <button class="toggle-sidebar" aria-label="Toggle sidebar">☰</button>
       <h2>Rooms</h2>
       <ul class="room-list">
         <!-- Dynamic rooms will be populated here -->
@@ -39,6 +40,7 @@
         <input
           type="text"
           id="room-input"
+          name="room"
           placeholder="New room name..."
           autocomplete="off"
           aria-label="Room name input"

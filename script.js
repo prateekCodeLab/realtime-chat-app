@@ -155,7 +155,9 @@ function autoScroll() {
 
 // Sidebar toggle
 toggleSidebar.addEventListener('click', () => {
+  // console.log('Before toggle - Classes:', sidebar.className, 'Toggle visible:', toggleSidebar.style.display);
   sidebar.classList.toggle('hidden');
+  // console.log('After toggle - Classes:', sidebar.className, 'Toggle visible:', toggleSidebar.style.display);
 });
 
 // Theme toggle

@@ -337,6 +337,8 @@
       max-height: 40vh;
       position: absolute;
       z-index: 10;
+      transform: translateX(0);
+      transition: transform 0.3s ease;
     }
   
     .room-sidebar.hidden {
@@ -344,7 +346,17 @@
     }
   
     .toggle-sidebar {
-      display: block;
+      display: block; /* Should always show on mobile */
+      position: absolute; /* Keep it visible outside sidebar */
+      top: 10px;
+      left: 10px;
+      z-index: 11; /* Above sidebar */
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--sidebar-text);
+      cursor: pointer;
+      margin-bottom: 0; /* Remove margin since it’s not inside sidebar */
     }
   
     .chat-main {
