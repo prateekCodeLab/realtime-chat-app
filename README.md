@@ -1,29 +1,28 @@
 # Realtime Chat App
 
-A real-time chat application built with Node.js, Express, Socket.IO, and vanilla JavaScript. Users can choose unique usernames, join chat rooms, and send messages instantly, with a responsive UI supporting light/dark modes and mobile devices.
+A real-time chat application built with Node.js, Express, Socket.IO, and vanilla JavaScript. Users can choose unique usernames, create and join chat rooms, and send messages instantly, with a responsive UI supporting light/dark modes and mobile devices.
 
 ## Features
 
 - **Username Authentication**:
-  - Users enter a unique username via a modal before joining the chat.
-  - Server validates usernames (no duplicates, non-empty, <20 chars).
-  - Active users stored in memory.
+  - Users enter a unique username via a modal before joining (max 20 chars, no duplicates).
+  - Server-side validation with error feedback.
 
 - **Core Chat Functionality**:
-  - Send/receive messages with usernames and timestamps (e.g., "Alice: Hi! 2:30 PM").
-  - Messages styled as bubbles (outgoing: blue, right; incoming: gray, left).
-  - Smart auto-scroll: Scrolls to new messages only if near the bottom.
+  - Real-time messaging with usernames and timestamps (e.g., "Anshu: hii 9:34 PM").
+  - Message bubbles (outgoing: blue, incoming: gray, system: centered).
+  - Smart auto-scroll: Scrolls to new messages only if near bottom.
   - Prevents empty messages (disabled send button, client/server checks).
 
-- **Room Management** (Partial):
-  - Users can join predefined rooms ("General," "Tech Talk," "Random") via sidebar.
+- **Room Management**:
+  - Join predefined rooms ("General," "Tech Talk," "Random") or create custom rooms (e.g., "AKKK").
   - Room switching clears messages and updates active room styling.
-  - Room creation UI exists (button/input), but creation is currently broken.
+  - Dynamic room list synced across users.
 
 - **UI**:
-  - Responsive design with collapsible sidebar, dark mode toggle (🌙/☀️), and animations.
+  - Responsive design with collapsible sidebar, dark/light mode toggle (🌙/☀️), and animations.
+  - Mobile-friendly: Sidebar slides in/out, messages scale (80% width).
   - Clean, modern look with Retina display support.
-  - Mobile-friendly: Sidebar toggles, messages scale.
 
 ## Tech Stack
 
@@ -98,4 +97,4 @@ A real-time chat application built with Node.js, Express, Socket.IO, and vanilla
    - Ensure cross-browser compatibility (Safari, Chrome, Firefox).
 
 
-## Developed by prateekCodeLab.
+Developed by prateekCodeLab.
